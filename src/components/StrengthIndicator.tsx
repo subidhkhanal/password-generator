@@ -1,5 +1,3 @@
-import { StrengthLevel } from "../types/password";
-
 interface StrengthIndicatorProps {
   strength: number;
   className?: string;
