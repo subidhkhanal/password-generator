@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://password-generator-your-domain.com"),
+  metadataBase: new URL("http://localhost:3000"),
   title: {
     default:
       "Best Free Password Generator - Create Strong & Secure Passwords Instantly",
@@ -42,12 +42,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title:
       "Best Free Password Generator - Create Strong & Secure Passwords Instantly",
     description:
       "Create unbreakable passwords with our free, secure generator. Customizable length, special characters, and instant strength checking. No storage, 100% secure.",
-    url: "https://password-generator-your-domain.com",
+    url: "http://localhost:3000",
     siteName: "Modern Password Generator",
     locale: "en_US",
     type: "website",
@@ -68,7 +78,11 @@ export const metadata: Metadata = {
     creator: "@yourtwitterhandle",
     images: ["/twitter-image.png"],
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#1f2937" },
@@ -85,9 +99,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-site-verification",
-    bing: "your-bing-verification",
-    yandex: "your-yandex-verification",
+    google: null,
   },
   category: "Security Tools",
 };
