@@ -112,13 +112,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <script
@@ -130,7 +123,7 @@ export default function RootLayout({
               name: "Modern Password Generator",
               applicationCategory: "SecurityApplication",
               operatingSystem: "Any",
-              url: "https://password-generator-your-domain.com",
+              url: "http://localhost:3000",
               description:
                 "Create unbreakable passwords with our free, secure password generator. Features customizable length and character types.",
               offers: {
@@ -151,7 +144,7 @@ export default function RootLayout({
               ],
               screenshot: {
                 "@type": "ImageObject",
-                url: "https://password-generator-your-domain.com/app-screenshot.png",
+                url: "/app-screenshot.png",
               },
               aggregateRating: {
                 "@type": "AggregateRating",
