@@ -41,7 +41,7 @@ export default function Home() {
         await navigator.clipboard.writeText(password);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
-      } catch (_) {
+      } catch {
         setError("Failed to copy password to clipboard");
       }
     }
